@@ -1,3 +1,5 @@
+@import "./components/AlbumDetails/AlbumDetails.css";
+
 .albums{
   display: flex;
   flex-flow: row nowrap;
