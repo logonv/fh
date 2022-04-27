@@ -1,13 +1,16 @@
 import React from 'react'
-import AlbumCard from '../components/AlbumCard/AlbumCard'
-import { album } from '../constants/album'
+
+import GenreRow from '../components/GenreRow/GenreRow'
 
 const LandingPage = () => {
 
     
   return (
-    <div id = 'albums'><AlbumCard album={album}/>
-    <AlbumCard album={album}/>
+    <div>
+        <GenreRow />
+        <GenreRow />
+        
+
     </div>
   )
 }
