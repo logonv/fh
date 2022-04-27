@@ -5,21 +5,15 @@ import React from "react";
 // import { useState } from "react";
 import { TextField } from "@mui/material";
 
-
-const SearchBar = ({searchValue, setSearchValue}) => {
-
+const SearchBar = ({ searchValue, setSearchValue }) => {
     const searchBarChange = (e) => {
-      setSearchValue(e.target.value)
-
-
-    }
+        setSearchValue(e.target.value);
+    };
 
     return (
-
-        <div style={{width:'50%'}}>
+        <div style={{ width: "45%" }}>
             <TextField
-  fullWidth
-
+                fullWidth
                 value={searchValue}
                 // InputProps={{
                 //     startAdornment: (
@@ -39,7 +33,6 @@ const SearchBar = ({searchValue, setSearchValue}) => {
             </Button>
             */}
         </div>
-
     );
 };
 

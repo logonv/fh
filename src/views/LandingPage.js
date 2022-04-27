@@ -18,7 +18,8 @@ const LandingPage = ({ resultsGroupByGenre, searchValue, setSearchValue }) => {
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "space-between",
-                        margin: "3% 3%",
+                        margin: "3% 3% 3% 3%",
+
                     }}
                 >
                     <Typography variant="h1"> FilmHub Music</Typography>

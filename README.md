@@ -2,6 +2,22 @@
 
 This is the client for the Filmhub take home test. It shows the top 50 Apple music albums grouped by genre. To run the app locally on your machine in dev mode, please first `npm install` before `npm start`. Due to CORS issues accessing the Apple Music api, a local node server must be running. This server can be found here [add link later]
 
+
+## Features implemented:
+
+Gets top 50 albums from given api link and sorts by genre and displays them
+Able to search by album name
+Able to learn more about a particular album
+
+Code is written but commented out to also search by artist name
+
+## Future Work
+CSS and styling (e.g. adjust size of cards, colours)
+"Music" genre returned by API showing all albums
+Some images returned by API are too low quality
+General efficiency and unnecessary re-renders
+
+
 *******
 ### Details from CRA
 
