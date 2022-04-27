@@ -3,7 +3,7 @@ import AlbumCard from "../AlbumCard/AlbumCard";
 import { Typography } from "@mui/material";
 
 const GenreRow = ({ genreAlbumsObject }) => {
-    console.log("genreAlbumsObject", genreAlbumsObject);
+    // console.log("genreAlbumsObject", genreAlbumsObject);
     //structure of genreAlbumsObject is genreName '', url: '', albums :[]
 
     return (

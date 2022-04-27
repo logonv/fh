@@ -4,9 +4,9 @@ const fetchTop50Albums = async () => {
         // {mode: 'no-cors'}
         "http://localhost:4000/appleResults"
     );
-    console.log(results);
+    // console.log(results);
     const data = await results.json();
-    console.log(data);
+    // console.log(data);
     return data;
 };
 
