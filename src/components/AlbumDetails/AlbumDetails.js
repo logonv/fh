@@ -10,6 +10,7 @@ import {
     Paper,
 } from "@mui/material";
 
+
 const AlbumDetails = ({ fetchedAlbums }) => {
     // useEffect(() => {
     //     fetchTop50Albums().then((apiResponse) => {
@@ -306,7 +307,10 @@ const AlbumDetails = ({ fetchedAlbums }) => {
                                                 textAlign: "center",
                                             }}
                                         >
-                                            {album.genres.map((genre) => {
+                                            {
+album.genres ? 
+                                            
+                                            album.genres.map((genre) => {
                                                 return (
                                                     <>
                                                         <Typography
@@ -317,7 +321,13 @@ const AlbumDetails = ({ fetchedAlbums }) => {
                                                         </Typography>
                                                     </>
                                                 );
-                                            })}
+                                            }) 
+
+                                            : ' '
+                                            
+                                            
+                                            
+                                            }
                                         </Paper>
                                     </Grid>
                                 </Grid>
