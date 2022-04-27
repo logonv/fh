@@ -1,6 +1,5 @@
 import React from "react";
 import AlbumCard from "../AlbumCard/AlbumCard";
-import { album } from "../../constants/album";
 import { Typography } from "@mui/material";
 
 const GenreRow = ({ genreAlbumsObject }) => {
