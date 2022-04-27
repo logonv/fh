@@ -13,7 +13,11 @@ const GenreRow = ({ genreAlbumsObject }) => {
 
             <div className="albums">
                 {genreAlbumsObject.albums.map((album) => {
-                    return <AlbumCard key={album.name} album={album} />;
+                    return (
+                        <div className="album">
+                            <AlbumCard key={album.name} album={album} />
+                        </div>
+                    );
                 })}
             </div>
         </div>

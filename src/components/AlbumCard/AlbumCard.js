@@ -10,7 +10,7 @@ import Typography from "@mui/material/Typography";
 
 const AlbumCard = ({album}) => {
     return (
-        <Card sx={{ maxWidth: 200 }}>
+        <Card sx={{ maxWidth: 200, height:400, overflow:"auto" }}>
             <CardMedia
                 component="img"
                 sx={{
