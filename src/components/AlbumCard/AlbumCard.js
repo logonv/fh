@@ -15,14 +15,9 @@ const AlbumCard = ({album}) => {
                 component="img"
                 sx={{
                     height:'60%',
-                    // width: '100%',
-
                     objectFit: 'contain'
                   }}
-                // height="140"
-
                 image={album.artworkUrl100}
-                // alt="green iguana"
             />
             <CardContent>
                 <Typography gutterBottom variant="subtitle1" component="div">

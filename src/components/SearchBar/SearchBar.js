@@ -16,8 +16,10 @@ const SearchBar = ({searchValue, setSearchValue}) => {
 
     return (
 
-        <div >
+        <div style={{width:'50%'}}>
             <TextField
+  fullWidth
+
                 value={searchValue}
                 // InputProps={{
                 //     startAdornment: (
@@ -29,7 +31,7 @@ const SearchBar = ({searchValue, setSearchValue}) => {
 
                 //     ),
                 // }}
-                placeholder="search"
+                placeholder="search album names"
                 onChange={searchBarChange}
             />
             {/* <Button>
