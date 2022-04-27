@@ -32,10 +32,10 @@ const SearchBar = ({searchValue, setSearchValue}) => {
                 placeholder="search"
                 onChange={searchBarChange}
             />
-            <Button>
+            {/* <Button>
               Search
             </Button>
-           
+            */}
         </div>
 
     );

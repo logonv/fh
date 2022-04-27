@@ -10,13 +10,14 @@ import Typography from "@mui/material/Typography";
 
 const AlbumCard = ({album}) => {
     return (
-        <Card sx={{ maxWidth: 200, height:400, overflow:"auto" }}>
+        <Card sx={{  maxWidth:'30vh', minWidth:'30vh' ,height:'40vh', overflow:"auto" }}>
             <CardMedia
                 component="img"
                 sx={{
-                    height:200,
-                    width: '100%',
-                    objectFit: 'cover'
+                    height:'60%',
+                    // width: '100%',
+
+                    objectFit: 'contain'
                   }}
                 // height="140"
 
@@ -24,10 +25,10 @@ const AlbumCard = ({album}) => {
                 // alt="green iguana"
             />
             <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="subtitle1" component="div">
                     {album.name}
                 </Typography>
-                <Typography variant="h7" color="text.secondary">
+                <Typography variant="body2" color="text.secondary">
                     {album.artistName}
                 </Typography>
             </CardContent>
