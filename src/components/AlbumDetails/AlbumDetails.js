@@ -6,7 +6,7 @@ const AlbumDetails = ({fetchedAlbums}) => {
 
     let {albumkey} = useParams()
     const albumArr = fetchedAlbums.filter((album) => {
-        if (album.id == albumkey){
+        if (album.id === albumkey){
             console.log('key match')
             return album
         }

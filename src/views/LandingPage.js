@@ -1,5 +1,4 @@
 import { Typography } from "@mui/material";
-import { margin } from "@mui/system";
 import React from "react";
 
 import GenreRow from "../components/GenreRow/GenreRow";
@@ -28,7 +27,7 @@ const LandingPage = ({ resultsGroupByGenre, searchValue, setSearchValue }) => {
                         setSearchValue={setSearchValue}
                     />
                 </div>
-                <div >
+                <div>
                     {keys.map((key) => {
                         return (
                             <GenreRow
