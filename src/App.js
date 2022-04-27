@@ -1,13 +1,15 @@
 import "./App.css";
 import LandingPage from "./views/LandingPage";
+import AlbumDetails from "./components/AlbumDetails/AlbumDetails";
 import { fetchTop50Albums } from "./functions/apiGet";
 import { useEffect, useState } from "react";
+import {Routes, Route} from 'react-router-dom'
 
 function App() {
     const [albumsGroupByGenre, setAlbumsGroupByGenre] = useState({});
-    const [searchValue, setSearchValue] = useState();
+    const [searchValue, setSearchValue] = useState('');
     const [fetchedAlbums, setFetchedAlbums] = useState([]);
-    
+
     useEffect(() => {
         fetchTop50Albums().then((apiResponse) => {
             const results = apiResponse.feed.results;
@@ -36,9 +38,11 @@ function App() {
 
     useEffect(() => {
         // console.log(searchValue);
-        fetchTop50Albums().then((apiResponse) => {
+        // fetchTop50Albums().then((apiResponse) => {
             // const results = apiResponse.feed.results;
             console.log(fetchedAlbums);
+
+
             let searchText = searchValue.toLowerCase();
             const filteredResults = fetchedAlbums.filter((album) => {
                 if (searchText === "") {
@@ -81,7 +85,7 @@ function App() {
                 });
             });
             setAlbumsGroupByGenre(resultsGroupByGenre);
-        });
+        // });
 
         //   fetchTop50Albums().then((apiResponse) => {
         //     const results = apiResponse.feed.results;
@@ -130,11 +134,19 @@ function App() {
 
     return (
         <>
-            <LandingPage
+        <Routes>
+          <Route path='/' element={<LandingPage
                 resultsGroupByGenre={albumsGroupByGenre}
                 searchValue={searchValue}
                 setSearchValue={setSearchValue}
-            />
+            />} />
+            
+          
+
+            <Route path='/album/:albumkey' element={<AlbumDetails fetchedAlbums={fetchedAlbums}
+            />} />
+            
+            </Routes>
         </>
     );
 }
