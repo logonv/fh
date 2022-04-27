@@ -143,7 +143,7 @@ function App() {
             
           
 
-            <Route path='/album/:albumkey' element={<AlbumDetails fetchedAlbums={fetchedAlbums}
+            <Route path='/album/:albumkey' element={<AlbumDetails fetchedAlbums={fetchedAlbums} setFetchedAlbums={setFetchedAlbums}
             />} />
             
             </Routes>
