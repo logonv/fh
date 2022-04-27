@@ -37,7 +37,7 @@ function App() {
 
     return (
         <>
-            <button onClick={fetchTop50Albums}> Click</button>
+
 
             <LandingPage resultsGroupByGenre={albumsGroupByGenre} />
         </>
