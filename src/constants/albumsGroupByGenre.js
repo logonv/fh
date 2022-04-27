@@ -22,6 +22,6 @@ results.forEach((album) => {
 
 // console.log(Object.keys(resultsGroupByGenre))
 
-console.log("resultGroupByGenre", resultsGroupByGenre)
+// console.log("resultGroupByGenre", resultsGroupByGenre)
 
 export default resultsGroupByGenre

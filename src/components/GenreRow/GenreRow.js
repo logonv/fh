@@ -3,15 +3,22 @@ import AlbumCard from '../AlbumCard/AlbumCard'
 import { album } from '../../constants/album'
 import { Typography } from '@mui/material'
 
-const GenreRow = () => {
+const GenreRow = ({genreAlbumsObject}) => {
+  console.log('genreAlbumsObject', genreAlbumsObject)
+  //structure of genreAlbumsObject is genreName '', url: '', albums :[]
+
   return (
       <div>
-          <Typography variant='h4'>Genre</Typography>
+          <Typography variant='h4'>{genreAlbumsObject.genreName}</Typography>
           
     <div className='albums'>
-        <AlbumCard album={album} />
-        <AlbumCard album={album} />
-        <AlbumCard album={album} />
+        {genreAlbumsObject.albums.map(album => {
+          return(
+            <AlbumCard album={album} />
+          )
+        })}
+       
+
     </div>
     </div>
   )
