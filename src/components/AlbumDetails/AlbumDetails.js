@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import {
     Card,
@@ -8,8 +8,9 @@ import {
     Typography,
     Grid,
     Paper,
+    Button,
+    CardHeader,
 } from "@mui/material";
-
 
 const AlbumDetails = ({ fetchedAlbums }) => {
     // useEffect(() => {
@@ -36,6 +37,7 @@ const AlbumDetails = ({ fetchedAlbums }) => {
         setAlbum(albumArr[0]);
     }, [fetchedAlbums, album, albumkey]);
 
+    let navigate = useNavigate()
     return (
         <div>
             {album ? (
@@ -48,6 +50,8 @@ const AlbumDetails = ({ fetchedAlbums }) => {
                             overflow: "auto",
                         }}
                     >
+                        <CardHeader action={<Button onClick={() => { navigate('/')}} size="large" variant="contained"> Back</Button>} />
+
                         <CardMedia
                             component="img"
                             sx={{
@@ -307,27 +311,20 @@ const AlbumDetails = ({ fetchedAlbums }) => {
                                                 textAlign: "center",
                                             }}
                                         >
-                                            {
-album.genres ? 
-                                            
-                                            album.genres.map((genre) => {
-                                                return (
-                                                    <>
-                                                        <Typography
-                                                            variant="h6"
-                                                            component="div"
-                                                        >
-                                                            {genre.name}
-                                                        </Typography>
-                                                    </>
-                                                );
-                                            }) 
-
-                                            : ' '
-                                            
-                                            
-                                            
-                                            }
+                                            {album.genres
+                                                ? album.genres.map((genre) => {
+                                                      return (
+                                                          <>
+                                                              <Typography
+                                                                  variant="h6"
+                                                                  component="div"
+                                                              >
+                                                                  {genre.name}
+                                                              </Typography>
+                                                          </>
+                                                      );
+                                                  })
+                                                : " "}
                                         </Paper>
                                     </Grid>
                                 </Grid>
