@@ -1,6 +1,6 @@
 # Filmhub Take Home Test
 
-This is the client for the Filmhub take home test. It shows the top 50 Apple music albums grouped by genre. To run the app locally on your machine in dev mode, please first `npm install` before `npm start`. Due to CORS issues accessing the Apple Music api, a local node server must be running. This server can be found here [add link later]
+This is the client for the Filmhub take home test. It shows the top 50 Apple music albums grouped by genre. To run the app locally on your machine in dev mode, please first `npm install` before `npm start`. Due to CORS issues accessing the Apple Music api, a local node server must be running. This server can be found here https://github.com/logonv/fhserver
 
 
 ## Features implemented:
