@@ -11,15 +11,19 @@ This is the client for the Fh take home test. It shows the top 50 Apple music al
 
 * Code is written but commented out to also search by artist name.
 * Some basic tests carried out with Cypress.
+* Manual testing carried out.
 
 ## Future Work/ Known Issues
 * More CSS and styling (e.g. adjust size of cards, colours) required
+* Possible truncate some text fields on the Cards when they are too long
 * Issue - "Music" genre returned by API showing all albums
 * Issue - Some images returned by API are too low quality
 * Need to improve general efficiency and remove unnecessary re-renders.
 * Need to remove the need for the additional server to act as CORS proxy.
 * Need to do more detailed tests.
 * Need to add a loading screen when fetching data as can be slow to fetch. (Maybe can store old data as cookies).
+* Need to add search functionality automatic tests
+
 
 
 *******

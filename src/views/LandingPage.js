@@ -1,14 +1,10 @@
 import { Typography } from "@mui/material";
 import React from "react";
-
 import GenreRow from "../components/GenreRow/GenreRow";
-// import resultsGroupByGenre from '../constants/albumsGroupByGenre'
 import SearchBar from "../components/SearchBar/SearchBar";
 
 const LandingPage = ({ resultsGroupByGenre, searchValue, setSearchValue }) => {
-    console.log(resultsGroupByGenre);
     const keys = Object.keys(resultsGroupByGenre);
-    console.log("keys", keys);
 
     return (
         <>
@@ -19,10 +15,12 @@ const LandingPage = ({ resultsGroupByGenre, searchValue, setSearchValue }) => {
                         alignItems: "center",
                         justifyContent: "space-between",
                         margin: "3% 3% 3% 3%",
-
                     }}
                 >
-                    <Typography variant="h1"> FilmHub Music</Typography>
+                    <Typography sx={{ typography: { sm: "h1", xs: "h5" } }}>
+                        {" "}
+                        FilmHub Music
+                    </Typography>
                     <SearchBar
                         searchValue={searchValue}
                         setSearchValue={setSearchValue}

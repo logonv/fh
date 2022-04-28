@@ -8,25 +8,34 @@ import Typography from "@mui/material/Typography";
 import { Button, CardActions } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
-
-
-const AlbumCard = ({album}) => {
-    let navigate = useNavigate()
+const AlbumCard = ({ album }) => {
+    let navigate = useNavigate();
     const learnMoreClicked = () => {
-        navigate(`/album/${album.id}`)
-    }
+        navigate(`/album/${album.id}`);
+    };
     return (
-        <Card sx={{  maxWidth:'30vh', minWidth:'30vh' ,height:'40vh', overflow:"auto" }}>
+        <Card
+            sx={{
+                maxWidth: "30vh",
+                minWidth: "30vh",
+                height: "40vh",
+                overflow: "auto",
+            }}
+        >
             <CardMedia
                 component="img"
                 sx={{
-                    height:'60%',
-                    objectFit: 'contain'
-                  }}
+                    height: "60%",
+                    objectFit: "contain",
+                }}
                 image={album.artworkUrl100}
             />
             <CardContent>
-                <Typography gutterBottom variant="subtitle1" component="div">
+                <Typography
+                    gutterBottom
+                    sx={{ typography: { sm: "subtitle1", xs: "subtitle2" } }}
+                    component="div"
+                >
                     {album.name}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
@@ -38,7 +47,6 @@ const AlbumCard = ({album}) => {
                     Learn More
                 </Button>
             </CardActions>
-            
         </Card>
     );
 };

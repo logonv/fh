@@ -3,13 +3,9 @@ import AlbumCard from "../AlbumCard/AlbumCard";
 import { Typography } from "@mui/material";
 
 const GenreRow = ({ genreAlbumsObject }) => {
-    // console.log("genreAlbumsObject", genreAlbumsObject);
-    //structure of genreAlbumsObject is genreName '', url: '', albums :[]
-
     return (
         <div>
             <Typography variant="h4">{genreAlbumsObject.genreName}</Typography>
-
             <div className="albums">
                 {genreAlbumsObject.albums.map((album) => {
                     return (

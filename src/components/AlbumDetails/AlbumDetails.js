@@ -13,12 +13,6 @@ import {
 } from "@mui/material";
 
 const AlbumDetails = ({ fetchedAlbums }) => {
-    // useEffect(() => {
-    //     fetchTop50Albums().then((apiResponse) => {
-    //         const results = apiResponse.feed.results;
-    //         setFetchedAlbums(results);
-    //     });
-    // }, []);
     const [album, setAlbum] = useState({});
     let { albumkey } = useParams();
     useEffect(() => {
@@ -32,12 +26,10 @@ const AlbumDetails = ({ fetchedAlbums }) => {
             }
         });
         console.log(albumArr);
-        // const album = albumArr[0];
-        // console.log(album);
         setAlbum(albumArr[0]);
     }, [fetchedAlbums, album, albumkey]);
 
-    let navigate = useNavigate()
+    let navigate = useNavigate();
     return (
         <div>
             {album ? (
@@ -50,7 +42,20 @@ const AlbumDetails = ({ fetchedAlbums }) => {
                             overflow: "auto",
                         }}
                     >
-                        <CardHeader action={<Button onClick={() => { navigate('/')}} size="large" variant="contained"> Back</Button>} />
+                        <CardHeader
+                            action={
+                                <Button
+                                    onClick={() => {
+                                        navigate("/");
+                                    }}
+                                    size="large"
+                                    variant="contained"
+                                >
+                                    {" "}
+                                    Back
+                                </Button>
+                            }
+                        />
 
                         <CardMedia
                             component="img"
@@ -78,13 +83,17 @@ const AlbumDetails = ({ fetchedAlbums }) => {
                                                 display: "flex",
                                                 justifyContent: "center",
                                                 alignItems: "center",
-                                                // padding: "3px",
                                                 minHeight: "10vh",
                                                 textAlign: "center",
                                             }}
                                         >
                                             <Typography
-                                                variant="h6"
+                                                sx={{
+                                                    typography: {
+                                                        sm: "h6",
+                                                        xs: "caption",
+                                                    },
+                                                }}
                                                 component="div"
                                                 textAlign="center"
                                             >
@@ -107,13 +116,18 @@ const AlbumDetails = ({ fetchedAlbums }) => {
                                                 display: "flex",
                                                 justifyContent: "center",
                                                 alignItems: "center",
-                                                // padding: "3px",
+
                                                 minHeight: "10vh",
                                                 textAlign: "center",
                                             }}
                                         >
                                             <Typography
-                                                variant="h6"
+                                                sx={{
+                                                    typography: {
+                                                        sm: "h6",
+                                                        xs: "caption",
+                                                    },
+                                                }}
                                                 component="div"
                                             >
                                                 {album.name}
@@ -147,13 +161,18 @@ const AlbumDetails = ({ fetchedAlbums }) => {
                                                 display: "flex",
                                                 justifyContent: "center",
                                                 alignItems: "center",
-                                                // padding: "3px",
+
                                                 minHeight: "10vh",
                                                 textAlign: "center",
                                             }}
                                         >
                                             <Typography
-                                                variant="h6"
+                                                sx={{
+                                                    typography: {
+                                                        sm: "h6",
+                                                        xs: "caption",
+                                                    },
+                                                }}
                                                 component="div"
                                                 textAlign="center"
                                             >
@@ -176,13 +195,18 @@ const AlbumDetails = ({ fetchedAlbums }) => {
                                                 display: "flex",
                                                 justifyContent: "center",
                                                 alignItems: "center",
-                                                // padding: "3px",
+
                                                 minHeight: "10vh",
                                                 textAlign: "center",
                                             }}
                                         >
                                             <Typography
-                                                variant="h6"
+                                                sx={{
+                                                    typography: {
+                                                        sm: "h6",
+                                                        xs: "caption",
+                                                    },
+                                                }}
                                                 component="div"
                                             >
                                                 {album.artistName}
@@ -216,13 +240,18 @@ const AlbumDetails = ({ fetchedAlbums }) => {
                                                 display: "flex",
                                                 justifyContent: "center",
                                                 alignItems: "center",
-                                                // padding: "3px",
+
                                                 minHeight: "10vh",
                                                 textAlign: "center",
                                             }}
                                         >
                                             <Typography
-                                                variant="h6"
+                                                sx={{
+                                                    typography: {
+                                                        sm: "h6",
+                                                        xs: "caption",
+                                                    },
+                                                }}
                                                 component="div"
                                                 textAlign="center"
                                             >
@@ -245,13 +274,17 @@ const AlbumDetails = ({ fetchedAlbums }) => {
                                                 display: "flex",
                                                 justifyContent: "center",
                                                 alignItems: "center",
-                                                // padding: "3px",
                                                 minHeight: "10vh",
                                                 textAlign: "center",
                                             }}
                                         >
                                             <Typography
-                                                variant="h6"
+                                                sx={{
+                                                    typography: {
+                                                        sm: "h6",
+                                                        xs: "caption",
+                                                    },
+                                                }}
                                                 component="div"
                                             >
                                                 {album.releaseDate}
@@ -285,13 +318,17 @@ const AlbumDetails = ({ fetchedAlbums }) => {
                                                 display: "flex",
                                                 justifyContent: "center",
                                                 alignItems: "center",
-                                                // padding: "3px",
                                                 minHeight: "10vh",
                                                 textAlign: "center",
                                             }}
                                         >
                                             <Typography
-                                                variant="h6"
+                                                sx={{
+                                                    typography: {
+                                                        sm: "h6",
+                                                        xs: "caption",
+                                                    },
+                                                }}
                                                 component="div"
                                                 textAlign="center"
                                             >
@@ -303,10 +340,8 @@ const AlbumDetails = ({ fetchedAlbums }) => {
                                         <Paper
                                             variant="outlined"
                                             sx={{
-                                                // display: "flex",
                                                 justifyContent: "center",
                                                 alignItems: "center",
-                                                // padding: "3px",
                                                 minHeight: "10vh",
                                                 textAlign: "center",
                                             }}
@@ -316,7 +351,13 @@ const AlbumDetails = ({ fetchedAlbums }) => {
                                                       return (
                                                           <>
                                                               <Typography
-                                                                  variant="h6"
+                                                                  sx={{
+                                                                      typography:
+                                                                          {
+                                                                              sm: "h6",
+                                                                              xs: "caption",
+                                                                          },
+                                                                  }}
                                                                   component="div"
                                                               >
                                                                   {genre.name}
