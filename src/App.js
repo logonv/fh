@@ -1,7 +1,7 @@
 import "./App.css";
 import LandingPage from "./views/LandingPage";
 import AlbumDetails from "./components/AlbumDetails/AlbumDetails";
-import { fetchTop50Albums } from "./functions/apiGet";
+import fetchTop50Albums  from "./functions/apiGet";
 import { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 
