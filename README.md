@@ -5,12 +5,12 @@ This is the client for the Fh take home test. It shows the top 50 Apple music al
 
 ## Features implemented:
 
-Gets top 50 albums from given api link and sorts by genre and displays them
-Able to search by album name
-Able to learn more about a particular album
+* Gets top 50 albums from given api link and sorts by genre and displays them
+* Able to search by album name
+* Able to learn more about a particular album
 
-Code is written but commented out to also search by artist name.
-Some basic tests carried out with Cypress.
+* Code is written but commented out to also search by artist name.
+* Some basic tests carried out with Cypress.
 
 ## Future Work/ Known Issues
 * More CSS and styling (e.g. adjust size of cards, colours) required
