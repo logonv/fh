@@ -9,14 +9,17 @@ Gets top 50 albums from given api link and sorts by genre and displays them
 Able to search by album name
 Able to learn more about a particular album
 
-Code is written but commented out to also search by artist name
+Code is written but commented out to also search by artist name.
+Some basic tests carried out with Cypress.
 
-## Future Work
-CSS and styling (e.g. adjust size of cards, colours)
-"Music" genre returned by API showing all albums
-Some images returned by API are too low quality
-General efficiency and remove unnecessary re-renders.
-Remove the need for the additional server to act as CORS proxy
+## Future Work/ Known Issues
+More CSS and styling (e.g. adjust size of cards, colours) required
+Issue - "Music" genre returned by API showing all albums
+Issue - Some images returned by API are too low quality
+Need to improve general efficiency and remove unnecessary re-renders.
+Need to remove the need for the additional server to act as CORS proxy.
+Need to do more detailed tests.
+Need to add a loading screen when fetching data as can be slow to fetch. (Maybe can store old data as cookies).
 
 
 *******
