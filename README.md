@@ -15,7 +15,8 @@ Code is written but commented out to also search by artist name
 CSS and styling (e.g. adjust size of cards, colours)
 "Music" genre returned by API showing all albums
 Some images returned by API are too low quality
-General efficiency and unnecessary re-renders
+General efficiency and remove unnecessary re-renders.
+Remove the need for the additional server to act as CORS proxy
 
 
 *******
